@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional mortgage broker website with services, contact form, calculator, and client reviews.">
+<meta name="keywords" content="Mortgage broker, Home loans, Refinance, Mortgage services, Best mortgage broker">
+<title>MortgagePro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Reset & Body */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body { line-height:1.6; color:#333; scroll-behavior:smooth; background:#fdfdfd; }
+a { text-decoration:none; color:inherit; }
+img { display:block; max-width:100%; height:auto; }
+
+/* Header */
+header { background:#0d47a1; color:#fff; padding:15px 0; position:fixed; width:100%; top:0; z-index:1000; transition:0.3s; }
+header.scrolled { background:#0b3a8b; }
+header .container { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto; padding:0 20px; }
+header nav a { margin-left:20px; font-weight:600; transition:0.3s; }
+header nav a:hover { text-decoration:underline; color:#ff9800; }
+
+/* Hero Section */
+.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:100vh; background:url('image1.jpg') no-repeat center center/cover; color:#fff; position:relative; width:100vw; }
+.hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); }
+.hero-content { position:relative; z-index:1; max-width:700px; animation:fadeIn 1s ease forwards; opacity:0; }
+.hero h1 { font-size:3rem; margin-bottom:20px; }
+.hero p { font-size:1.2rem; margin-bottom:20px; }
+.hero .cta { padding:12px 25px; background:#ff9800; color:#fff; font-weight:600; border-radius:5px; transition:0.3s; }
+.hero .cta:hover { transform:scale(1.05); }
+
+/* Keyframes */
+@keyframes fadeIn {0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+
+/* Sections */
+section { padding:80px 20px; max-width:1200px; margin:auto; }
+h2 { text-align:center; margin-bottom:40px; font-size:2rem; color:#0d47a1; }
+
+/* About Section */
+.about { 
+  display:flex; 
+  flex-wrap:wrap; 
+  align-items:center; 
+  gap:20px; 
+  justify-content:space-between; 
+}
+.about .text { 
+  flex:1; 
+  font-size:1rem; 
+  line-height:1.8; 
+  order:1; 
+  padding-right:20px; 
+}
+.about img { 
+  flex:1; 
+  border-radius:12px; 
+  transition:transform 0.5s; 
+  order:2; 
+  max-width:100%; 
+  max-height:400px; /* fixed max-height */
+  object-fit:cover; /* important: hero-size image fits nicely */
+}
+.about img:hover { transform:scale(1.05) rotate(1deg); }
+
+/* Services */
+.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.service-card { background:#f1f1f1; padding:25px; border-radius:12px; text-align:center; transition: transform 0.3s, box-shadow 0.3s; }
+.service-card:hover { transform:translateY(-10px); box-shadow:0 10px 25px rgba(0,0,0,0.2); }
+.service-card h3 { margin-bottom:10px; color:#1976d2; }
+
+/* Calculator */
+.calculator { max-width:600px; margin:auto; background:#e3f2fd; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:transform 0.3s; }
+.calculator:hover { transform:translateY(-5px); }
+.calculator input { width:100%; padding:15px; margin:10px 0; border-radius:8px; border:1px solid #ccc; transition:0.3s; }
+.calculator input:focus { border-color:#1976d2; box-shadow:0 0 10px rgba(25,118,210,0.3); }
+.calculator button { padding:15px 25px; background:#1976d2; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:0.3s; }
+.calculator button:hover { background:#0d47a1; transform:scale(1.05); }
+.calculator .result { margin-top:15px; font-weight:600; font-size:1.1rem; }
+
+/* Reviews */
+.reviews { text-align:center; }
+.review-placeholder { background:#f1f1f1; padding:20px; border-radius:12px; margin:10px auto; max-width:600px; transition:transform 0.3s; }
+.review-placeholder:hover { transform:scale(1.03); }
+
+/* Contact Form */
+.contact form { max-width:600px; margin:auto; display:flex; flex-direction:column; background:#e3f2fd; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:transform 0.3s; }
+.contact form:hover { transform:translateY(-5px); }
+.contact input, .contact textarea { padding:15px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc; transition:0.3s; }
+.contact input:focus, .contact textarea:focus { border-color:#1976d2; box-shadow:0 0 12px rgba(25,118,210,0.3); }
+.contact button { padding:15px 25px; background:#1976d2; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:0.3s; }
+.contact button:hover { background:#0d47a1; transform:scale(1.05); }
+
+/* Footer */
+footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; }
+.footer-container { display:flex; flex-wrap:wrap; gap:30px; max-width:1200px; margin:auto; justify-content:space-between; }
+.footer-col { flex:1 1 200px; }
+.footer-col h3 { margin-bottom:15px; color:#ff9800; }
+.footer-col p, .footer-col ul, .footer-col a { margin-bottom:10px; color:#fff; }
+.footer-col a { display:inline-block; transition:0.3s; }
+.footer-col a:hover { color:#ff9800; text-decoration:underline; }
+.footer-bottom { text-align:center; margin-top:40px; border-top:1px solid #333; padding-top:20px; color:#ccc; }
+
+/* Responsive */
+@media(max-width:768px){
+.hero h1{font-size:2rem;}
+.hero p{font-size:1rem;}
+.about { flex-direction:column; }
+.about .text, .about img { order:initial; padding:0; max-height:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+<div class="container">
+<div class="logo"><h2>MortgagePro</h2></div>
+<nav>
+<a href="#hero">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#calculator">Calculator</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+<div class="hero-content">
+<h1>Trusted Mortgage Brokers for Home Loans & Refinance</h1>
+<p>We help clients secure the best mortgage rates with expert advice and personalized service.</p>
+<a href="#contact" class="cta">Get Free Consultation</a>
+</div>
+</section>
+
+<!-- About -->
+<section id="about">
+<h2>About Us</h2>
+<div class="about">
+<div class="text">
+<p>MortgagePro is a professional mortgage brokerage providing expert home loan and refinancing solutions for clients globally or in Canada. Our team ensures personalized guidance for every client.</p>
+</div>
+<img src="image2.jpg" alt="About Mortgage">
+</div>
+</section>
+
+<!-- Services -->
+<section id="services">
+<h2>Our Services</h2>
+<div class="services">
+<div class="service-card"><h3>Home Purchase Loans</h3><p>Helping clients finance their dream homes with flexible mortgage options.</p></div>
+<div class="service-card"><h3>Refinancing</h3><p>Get better rates and terms by refinancing your existing mortgage.</p></div>
+<div class="service-card"><h3>Investment Property Loans</h3><p>Secure financing for investment properties with expert guidance.</p></div>
+<div class="service-card"><h3>First-Time Buyer Assistance</h3><p>Guiding first-time buyers through the mortgage process step by step.</p></div>
+</div>
+</section>
+
+<!-- Calculator -->
+<section id="calculator">
+<h2>Mortgage Calculator</h2>
+<div class="calculator">
+<input type="number" id="loanAmount" placeholder="Loan Amount">
+<input type="number" id="interestRate" placeholder="Interest Rate (%)">
+<input type="number" id="termYears" placeholder="Term (Years)">
+<button onclick="calculateMortgage()">Calculate</button>
+<div class="result" id="calcResult"></div>
+</div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews">
+<h2>Client Reviews</h2>
+<div class="reviews">
+<div class="review-placeholder">"Excellent mortgage advice! – John D."</div>
+<div class="review-placeholder">"Professional and fast service. – Sarah K."</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<h2>Contact Us</h2>
+<div class="contact">
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<input type="tel" placeholder="Your Phone">
+<textarea placeholder="Your Message" rows="5"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="footer-container">
+<div class="footer-col">
+<h3>MortgagePro</h3>
+<p>Your trusted mortgage broker providing home loans and refinancing solutions globally.</p>
+</div>
+<div class="footer-col">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#calculator">Calculator</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Contact Info</h3>
+<p>Email: info@mortgagepro.com</p>
+<p>Phone: +1 123-456-7890</p>
+<p>Address: 123 Finance Street, Toronto, Canada</p>
+</div>
+<div class="footer-col">
+<h3>Follow Us</h3>
+<a href="https://facebook.com" target="_blank">Facebook</a><br>
+<a href="https://linkedin.com" target="_blank">LinkedIn</a><br>
+<a href="mailto:info@mortgagepro.com">Email</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 MortgagePro. All rights reserved.</p>
+</div>
+</footer>
+
+<script>
+// Header scroll effect
+window.addEventListener('scroll', () => {
+document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Calculator JS
+function calculateMortgage() {
+const loan = parseFloat(document.getElementById('loanAmount').value);
+const rate = parseFloat(document.getElementById('interestRate').value)/100/12;
+const term = parseFloat(document.getElementById('termYears').value)*12;
+if(loan && rate && term){
+const payment = (loan*rate)/(1-Math.pow(1+rate,-term));
+document.getElementById('calcResult').innerText = "Estimated Monthly Payment: $" + payment.toFixed(2);
+} else {
+document.getElementById('calcResult').innerText = "Please enter all values.";
+}
+}
+</script>
+
+</body>
+</html>
