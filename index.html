@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Professional mortgage broker website with services, contact form, calculator, and client reviews.">
-<meta name="keywords" content="Mortgage broker, Home loans, Refinance, Mortgage services, Best mortgage broker">
+<meta name="keywords" content="Mortgage broker, First & Second Mortgages, Refinance, Mortgage services, Ontario mortgage broker">
 <title>MortgagePro</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -58,8 +58,8 @@ h2 { text-align:center; margin-bottom:40px; font-size:2rem; color:#0d47a1; }
   transition:transform 0.5s; 
   order:2; 
   max-width:100%; 
-  max-height:400px; /* fixed max-height */
-  object-fit:cover; /* important: hero-size image fits nicely */
+  max-height:400px; 
+  object-fit:cover; 
 }
 .about img:hover { transform:scale(1.05) rotate(1deg); }
 
@@ -107,6 +107,7 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 .hero p{font-size:1rem;}
 .about { flex-direction:column; }
 .about .text, .about img { order:initial; padding:0; max-height:none; }
+header .container { flex-direction:column; gap:10px; }
 }
 </style>
 </head>
@@ -115,7 +116,9 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 <!-- Header -->
 <header>
 <div class="container">
-<div class="logo"><h2>MortgagePro</h2></div>
+<div class="logo">
+  <img src="logo.png" alt="MortgagePro Logo" style="height:50px;">
+</div>
 <nav>
 <a href="#hero">Home</a>
 <a href="#about">About</a>
@@ -130,8 +133,8 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 <!-- Hero Section -->
 <section class="hero" id="hero">
 <div class="hero-content">
-<h1>Trusted Mortgage Brokers for Home Loans & Refinance</h1>
-<p>We help clients secure the best mortgage rates with expert advice and personalized service.</p>
+<h1>Trusted Mortgage Brokers for First & Second Mortgages</h1>
+<p>We help clients secure the best mortgage rates with expert advice and personalized service in Ontario.</p>
 <a href="#contact" class="cta">Get Free Consultation</a>
 </div>
 </section>
@@ -141,7 +144,7 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 <h2>About Us</h2>
 <div class="about">
 <div class="text">
-<p>MortgagePro is a professional mortgage brokerage providing expert home loan and refinancing solutions for clients globally or in Canada. Our team ensures personalized guidance for every client.</p>
+<p>MortgagePro is a professional mortgage brokerage providing expert first and second mortgage solutions for clients in Ontario. Our team ensures personalized guidance for every client.</p>
 </div>
 <img src="image2.jpg" alt="About Mortgage">
 </div>
@@ -151,7 +154,7 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 <section id="services">
 <h2>Our Services</h2>
 <div class="services">
-<div class="service-card"><h3>Home Purchase Loans</h3><p>Helping clients finance their dream homes with flexible mortgage options.</p></div>
+<div class="service-card"><h3>First & Second Mortgages</h3><p>Helping clients secure the right mortgage for their needs in Ontario.</p></div>
 <div class="service-card"><h3>Refinancing</h3><p>Get better rates and terms by refinancing your existing mortgage.</p></div>
 <div class="service-card"><h3>Investment Property Loans</h3><p>Secure financing for investment properties with expert guidance.</p></div>
 <div class="service-card"><h3>First-Time Buyer Assistance</h3><p>Guiding first-time buyers through the mortgage process step by step.</p></div>
@@ -179,18 +182,19 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 </div>
 </section>
 
-<!-- Contact -->
+
+
 <section id="contact">
-<h2>Contact Us</h2>
-<div class="contact">
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<input type="tel" placeholder="Your Phone">
-<textarea placeholder="Your Message" rows="5"></textarea>
-<button type="submit">Send Message</button>
-</form>
-</div>
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <form id="leadForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Your Phone" required>
+      <textarea id="message" placeholder="Your Message" rows="5"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </section>
 
 <!-- Footer -->
@@ -198,7 +202,7 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 <div class="footer-container">
 <div class="footer-col">
 <h3>MortgagePro</h3>
-<p>Your trusted mortgage broker providing home loans and refinancing solutions globally.</p>
+<p>Your trusted mortgage broker providing first & second mortgage solutions in Ontario.</p>
 </div>
 <div class="footer-col">
 <h3>Quick Links</h3>
@@ -215,7 +219,7 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 <h3>Contact Info</h3>
 <p>Email: info@mortgagepro.com</p>
 <p>Phone: +1 123-456-7890</p>
-<p>Address: 123 Finance Street, Toronto, Canada</p>
+<p>Address: 123 Finance Street, Toronto, Ontario</p>
 </div>
 <div class="footer-col">
 <h3>Follow Us</h3>
@@ -247,6 +251,31 @@ document.getElementById('calcResult').innerText = "Estimated Monthly Payment: $"
 document.getElementById('calcResult').innerText = "Please enter all values.";
 }
 }
+
+
+// Contact Form JS (Google Sheet connection)
+document.getElementById("leadForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  fetch("https://script.google.com/macros/s/AKfycbxcb4WoUnMye8PsZwvzREpVzMfA0gu5jFRZthtnVTH0ZuHIfzr_DQMLZ7KPh3JcEZwuiw/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert("Thank you! Your message has been sent.");
+    document.getElementById("leadForm").reset();
+  })
+  .catch(err => console.error("Error:", err));
+});
+
+
+
 </script>
 
 </body>
