@@ -1,12 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> -->
+  <html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="Professional mortgage broker website with services, contact form, calculator, and client reviews.">
 <meta name="keywords" content="Mortgage broker, First & Second Mortgages, Refinance, Mortgage services, Ontario mortgage broker">
-<title>MortgagePro</title>
+<title>Ontario-Mortgage Broker | First & Second Mortgages</title>
+<link rel="canonical" href="https://ontario-mortgagebroker.ca/">
+<link rel="preload" as="image" href="ontario-mortgage-broker-hero.webp">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<!--  SCHEMA MARKUP (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MortgageBroker",
+    "name": "Ontario Mortgage Broker",
+    "url": "https://ontario-mortgagebroker.ca",
+    "logo": "https://ontario-mortgagebroker.ca/ontario-mortgage-broker-logo.webp",
+    "telephone": "+1-647-303-9686",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "80 Eastern Ave Unit 3",
+      "addressLocality": "Brampton",
+      "addressRegion": "ON",
+      "postalCode": "L6W 1X9",
+      "addressCountry": "CA"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Ontario, Canada"
+    },
+    "serviceProvided": [
+      "First Mortgages",
+      "Second Mortgages",
+      "Mortgage Refinancing",
+      "Investment Property Mortgages"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/",
+      "https://www.linkedin.com/"
+    ]
+  }
+  </script>
+    <!-- CSS STYLE LAST -->
+
 <style>
 /* Reset & Body */
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
@@ -22,7 +61,8 @@ header nav a { margin-left:20px; font-weight:600; transition:0.3s; }
 header nav a:hover { text-decoration:underline; color:#ff9800; }
 
 /* Hero Section */
-.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:100vh; background:url('image1.jpg') no-repeat center center/cover; color:#fff; position:relative; width:100vw; }
+/* .hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:100vh; background:url('ontario-mortgage-broker-hero.webp') no-repeat center center/cover; color:#fff; position:relative; width:100vw; } */
+.hero{position:relative;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center;text-align:center;overflow:hidden;color:#fff}.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5);z-index:-1}.hero-content{position:relative;z-index:1;max-width:700px;animation:fadeIn 1s ease forwards;opacity:0}.hero h1{font-size:3rem;margin-bottom:20px}.hero p{font-size:1.2rem;margin-bottom:20px}.hero .cta{padding:12px 25px;background:#ff9800;color:#fff;font-weight:600;border-radius:5px;transition:.3s}.hero .cta:hover{transform:scale(1.05)}@keyframes fadeIn{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
 .hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); }
 .hero-content { position:relative; z-index:1; max-width:700px; animation:fadeIn 1s ease forwards; opacity:0; }
 .hero h1 { font-size:3rem; margin-bottom:20px; }
@@ -101,6 +141,28 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 .footer-col a:hover { color:#ff9800; text-decoration:underline; }
 .footer-bottom { text-align:center; margin-top:40px; border-top:1px solid #333; padding-top:20px; color:#ccc; }
 
+
+
+.footer-legal {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-legal a {
+  color: #ccc;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-legal a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+
+
+
+
 /* Responsive */
 @media(max-width:768px){
 .hero h1{font-size:2rem;}
@@ -108,6 +170,17 @@ footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; 
 .about { flex-direction:column; }
 .about .text, .about img { order:initial; padding:0; max-height:none; }
 header .container { flex-direction:column; gap:10px; }
+}
+/* Responsive tweaks for Services section */
+@media(max-width:768px){
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .service-card {
+    padding: 20px;
+  }
 }
 </style>
 </head>
@@ -117,7 +190,15 @@ header .container { flex-direction:column; gap:10px; }
 <header>
 <div class="container">
 <div class="logo">
-  <img src="logo.png" alt="MortgagePro Logo" style="height:50px;">
+  <!-- <img src="logo.png" alt="MortgagePro Logo" style="height:50px;"> -->
+   <img 
+  src="ontario-mortgage-broker-logo.webp"
+  alt="Ontario Mortgage Broker logo – licensed mortgage brokerage in Ontario Canada"
+  loading="lazy"
+  width="60"
+  height="60"
+>
+
 </div>
 <nav>
 <a href="#hero">Home</a>
@@ -131,22 +212,39 @@ header .container { flex-direction:column; gap:10px; }
 </header>
 
 <!-- Hero Section -->
-<section class="hero" id="hero">
+<!-- <section class="hero" id="hero">
 <div class="hero-content">
-<h1>Trusted Mortgage Brokers for First & Second Mortgages</h1>
+<h1>Trusted Ontario-Mortgage Brokers for First & Second Mortgages</h1>
 <p>We help clients secure the best mortgage rates with expert advice and personalized service in Ontario.</p>
 <a href="#contact" class="cta">Get Free Consultation</a>
 </div>
+</section> -->
+
+
+<section class="hero" id="hero">
+  <img src="ontario-mortgage-broker-hero.webp" alt="Ontario mortgage broker helping clients with first and second mortgages in Brampton" class="hero-img" loading="eager">
+  <div class="hero-content">
+    <h1>Trusted Ontario Mortgage Brokers for First & Second Mortgages</h1>
+    <p>We help clients secure the best mortgage rates across Ontario.</p>
+    <a href="#contact" class="cta">Get Free Consultation</a>
+  </div>
 </section>
+
+
+
+
+
+
+
 
 <!-- About -->
 <section id="about">
-  <h2>About Ontario Mortgage Broker</h2>
+  <h2>About Ontario-Mortgage Broker</h2>
   <div class="about">
     <div class="text">
       <h3>Licensed Mortgage Brokerage in Ontario</h3>
       <p>
-        Ontario Mortgage Broker is a licensed and professional mortgage brokerage serving homeowners,
+        Ontario-Mortgage Broker is a licensed and professional mortgage brokerage serving homeowners,
         buyers, and investors across <strong>Ontario, Canada</strong>.
         We specialize in <strong>First and Second Mortgages</strong>, providing customized
         mortgage solutions designed to meet the unique financial needs of our clients.
@@ -162,13 +260,21 @@ header .container { flex-direction:column; gap:10px; }
 
       <h3>Transparency, Trust & Long-Term Success</h3>
       <p>
-        At Ontario Mortgage Broker, we believe in transparency, trust, and long-term financial success.
+        At Ontario-Mortgage Broker, we believe in transparency, trust, and long-term financial success.
         Our goal is to simplify the mortgage process by offering clear advice, personalized
         solutions, and reliable support tailored specifically to Ontario's lending regulations
         and market conditions.
       </p>
     </div>
-    <img src="image2.jpg" alt="About Ontario Mortgage Broker">
+    <!-- <img src="image2.jpg" alt="About Ontario Mortgage Broker"> -->
+     <img 
+  src="ontario-mortgage-broker-about.webp"
+  alt="Ontario mortgage broker providing first and second mortgages in Ontario"
+  loading="lazy"
+  width="1400"
+  height="800"
+>
+
   </div>
 </section>
 
@@ -218,29 +324,6 @@ header .container { flex-direction:column; gap:10px; }
   </div>
 </section>
 
-<style>
-/* Responsive tweaks for Services section */
-@media(max-width:768px){
-  .services {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .service-card {
-    padding: 20px;
-  }
-}
-</style>
-
-
-
-
-
-
-
-
-
-
 <!-- Calculator -->
 <section id="calculator">
 <h2>Mortgage Calculator</h2>
@@ -262,8 +345,6 @@ header .container { flex-direction:column; gap:10px; }
 </div>
 </section>
 
-
-
 <section id="contact">
   <h2>Contact Us</h2>
   <div class="contact">
@@ -281,7 +362,7 @@ header .container { flex-direction:column; gap:10px; }
 <footer>
 <div class="footer-container">
 <div class="footer-col">
-<h3>MortgagePro</h3>
+<h3>Ontario-MortgageBroker</h3>
 <p>Your trusted mortgage broker providing first & second mortgage solutions in Ontario.</p>
 </div>
 <div class="footer-col">
@@ -299,17 +380,25 @@ header .container { flex-direction:column; gap:10px; }
 <h3>Contact Info</h3>
 <p>Email: Commercial.inquiries4@gmail.com</p>
 <p>Phone: +1 647-303-9686</p>
-<p>Address: 80 Eastern Ave Unit 3, Brampton, ON L6W 1&times;9</p>
+<p>Address: 80 Eastern Ave Unit 3, Brampton, ON L6W 1X9</p>
 </div>
 <div class="footer-col">
 <h3>Follow Us</h3>
 <a href="https://facebook.com" target="_blank">Facebook</a><br>
 <a href="https://linkedin.com" target="_blank">LinkedIn</a><br>
-<a href="mailto:info@mortgagepro.com">Email</a>
+<a href="mailto:Commercial.inquiries4@gmail.com">Email</a>
+
 </div>
 </div>
+<div class="footer-legal">
+  <p>
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="disclaimer.html">Disclaimer</a>
+  </p>
+</div>
+
 <div class="footer-bottom">
-<p>© 2025 MortgagePro. All rights reserved.</p>
+<p>© 2025 Ontario-MortgageBroker. All rights reserved.</p>
 </div>
 </footer>
 
@@ -337,8 +426,9 @@ document.getElementById('calcResult').innerText = "Please enter all values.";
 document.getElementById("leadForm").addEventListener("submit", function(e){
   e.preventDefault();
 
-  fetch("https://script.google.com/macros/s/AKfycbxcb4WoUnMye8PsZwvzREpVzMfA0gu5jFRZthtnVTH0ZuHIfzr_DQMLZ7KPh3JcEZwuiw/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwMOwmQ_RZqg8NEfTjz4Sgg3TE-17X34hBE8Mv_kHDOjyPWFQcWKIBr77vwQt8qKDSrkQ/exec", {
     method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
@@ -347,11 +437,13 @@ document.getElementById("leadForm").addEventListener("submit", function(e){
     })
   })
   .then(res => res.json())
-  .then(data => {
-    alert("Thank you! Your message has been sent.");
+  .then(() => {
+    alert("Message sent successfully!");
     document.getElementById("leadForm").reset();
   })
-  .catch(err => console.error("Error:", err));
+  .catch(() => {
+    alert("Error! Please try again.");
+  });
 });
 
 
