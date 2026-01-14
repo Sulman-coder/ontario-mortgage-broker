@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- <html lang="en"> -->
   <html lang="en-CA">
 <head>
 <meta charset="UTF-8">
@@ -12,38 +11,46 @@
 <link rel="preload" as="image" href="ontario-mortgage-broker-hero.webp">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <!--  SCHEMA MARKUP (SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MortgageBroker",
-    "name": "Ontario Mortgage Broker",
-    "url": "https://ontario-mortgagebroker.ca",
-    "logo": "https://ontario-mortgagebroker.ca/ontario-mortgage-broker-logo.webp",
-    "telephone": "+1-647-303-9686",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "80 Eastern Ave Unit 3",
-      "addressLocality": "Brampton",
-      "addressRegion": "ON",
-      "postalCode": "L6W 1X9",
-      "addressCountry": "CA"
-    },
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Ontario, Canada"
-    },
-    "serviceProvided": [
-      "First Mortgages",
-      "Second Mortgages",
-      "Mortgage Refinancing",
-      "Investment Property Mortgages"
-    ],
-    "sameAs": [
-      "https://www.facebook.com/",
-      "https://www.linkedin.com/"
-    ]
-  }
-  </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MortgageBroker",
+  "name": "Miss Hareem Jibran Mortgage Broker",
+  "url": "https://ontario-mortgagebroker.ca",
+  "logo": "https://ontario-mortgagebroker.ca/ontario-mortgage-broker-logo.webp",
+  "telephone": "+1-647-303-9686",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Centum Mortgage"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "80 Eastern Ave Unit 3",
+    "addressLocality": "Brampton",
+    "addressRegion": "ON",
+    "postalCode": "L6W 1X9",
+    "addressCountry": "CA"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Ontario, Canada"
+  },
+  "serviceProvided": [
+    "First Mortgages",
+    "Second Mortgages",
+    "Mortgage Refinancing",
+    "Investment Property Mortgages"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/",
+    "https://www.linkedin.com/"
+  ]
+}
+</script>
+
+
+
     <!-- CSS STYLE LAST -->
 
 <style>
@@ -124,12 +131,14 @@ h2 { text-align:center; margin-bottom:40px; font-size:2rem; color:#0d47a1; }
 .review-placeholder:hover { transform:scale(1.03); }
 
 /* Contact Form */
-.contact form { max-width:600px; margin:auto; display:flex; flex-direction:column; background:#e3f2fd; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:transform 0.3s; }
+ .contact form { max-width:600px; margin:auto; display:flex; flex-direction:column; background:#e3f2fd; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:transform 0.3s; }
 .contact form:hover { transform:translateY(-5px); }
 .contact input, .contact textarea { padding:15px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc; transition:0.3s; }
 .contact input:focus, .contact textarea:focus { border-color:#1976d2; box-shadow:0 0 12px rgba(25,118,210,0.3); }
 .contact button { padding:15px 25px; background:#1976d2; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:0.3s; }
-.contact button:hover { background:#0d47a1; transform:scale(1.05); }
+.contact button:hover { background:#0d47a1; transform:scale(1.05); } 
+
+
 
 /* Footer */
 footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; }
@@ -211,23 +220,21 @@ header .container { flex-direction:column; gap:10px; }
 </div>
 </header>
 
-<!-- Hero Section -->
-<!-- <section class="hero" id="hero">
-<div class="hero-content">
-<h1>Trusted Ontario-Mortgage Brokers for First & Second Mortgages</h1>
-<p>We help clients secure the best mortgage rates with expert advice and personalized service in Ontario.</p>
-<a href="#contact" class="cta">Get Free Consultation</a>
-</div>
-</section> -->
 
 
 <section class="hero" id="hero">
   <img src="ontario-mortgage-broker-hero.webp" alt="Ontario mortgage broker helping clients with first and second mortgages in Brampton" class="hero-img" loading="eager">
-  <div class="hero-content">
+  <!-- <div class="hero-content">
     <h1>Trusted Ontario Mortgage Brokers for First & Second Mortgages</h1>
     <p>We help clients secure the best mortgage rates across Ontario.</p>
     <a href="#contact" class="cta">Get Free Consultation</a>
-  </div>
+  </div> -->
+  <div class="hero-content">
+  <h1>Miss Hareem Jibran – Mortgage Broker at Centum Mortgage Ontario</h1>
+  <p>Licensed mortgage broker with Centum Mortgage helping Ontario clients with first & second mortgages.</p>
+  <a href="#contact" class="cta">Get Free Consultation</a>
+</div>
+
 </section>
 
 
@@ -345,18 +352,25 @@ header .container { flex-direction:column; gap:10px; }
 </div>
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact">
-    <form id="leadForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <input type="tel" id="phone" placeholder="Your Phone" required>
-      <textarea id="message" placeholder="Your Message" rows="5"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+
+
+<section class="contact">
+  <form
+    id="contact"
+    class="contact-form"
+    method="post"
+    action="https://script.google.com/macros/s/AKfycbwocjlpafwAWvW-2E9Jzx6BpJIvDuekmF6gYdaGGW4zWkZSieaYD0eT8b5WTjDdlbm_/exec">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone" required>
+    <textarea name="message" placeholder="Your Message"></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
 </section>
+
+
 
 <!-- Footer -->
 <footer>
@@ -376,12 +390,28 @@ header .container { flex-direction:column; gap:10px; }
 <li><a href="#contact">Contact</a></li>
 </ul>
 </div>
-<div class="footer-col">
+<!-- <div class="footer-col">
 <h3>Contact Info</h3>
 <p>Email: Commercial.inquiries4@gmail.com</p>
 <p>Phone: +1 647-303-9686</p>
 <p>Address: 80 Eastern Ave Unit 3, Brampton, ON L6W 1X9</p>
+<p>Mortgage Broker: Miss Hareem Jibran (Centum Mortgage)</p>
+
+</div> -->
+
+
+<div class="footer-col">
+  <h3>Contact Info</h3>
+  <p>Email: <a href="mailto:Commercial.inquiries4@gmail.com">Commercial.inquiries4@gmail.com</a></p>
+  <p>Phone: <a href="tel:+16473039686">+1 647-303-9686</a></p>
+  <p>
+    Address:<br>
+    80 Eastern Ave Unit 3,<br>
+    Brampton, ON L6W 1X9
+  </p>
+  <p>Mortgage Broker: Miss Hareem Jibran<br>(Centum Mortgage)</p>
 </div>
+
 <div class="footer-col">
 <h3>Follow Us</h3>
 <a href="https://facebook.com" target="_blank">Facebook</a><br>
@@ -420,32 +450,6 @@ document.getElementById('calcResult').innerText = "Estimated Monthly Payment: $"
 document.getElementById('calcResult').innerText = "Please enter all values.";
 }
 }
-
-
-// Contact Form JS (Google Sheet connection)
-document.getElementById("leadForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  fetch("https://script.google.com/macros/s/AKfycbwMOwmQ_RZqg8NEfTjz4Sgg3TE-17X34hBE8Mv_kHDOjyPWFQcWKIBr77vwQt8qKDSrkQ/exec", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      message: document.getElementById("message").value
-    })
-  })
-  .then(res => res.json())
-  .then(() => {
-    alert("Message sent successfully!");
-    document.getElementById("leadForm").reset();
-  })
-  .catch(() => {
-    alert("Error! Please try again.");
-  });
-});
-
 
 
 </script>
