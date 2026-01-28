@@ -6,19 +6,27 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="Professional mortgage broker website with services, contact form, calculator, and client reviews.">
 <meta name="keywords" content="Mortgage broker, First & Second Mortgages, Refinance, Mortgage services, Ontario mortgage broker">
+<meta property="og:title" content="Ontario Mortgage Broker | First & Second Mortgages">
+<meta property="og:description" content="Licensed mortgage broker helping Ontario clients with first & second mortgages.">
+<meta property="og:image" content="https://ontariomortgagebrokerca.ca/images/ontario-mortgage-broker-hero.webp">
+<meta property="og:url" content="https://ontariomortgagebrokerca.ca/">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+
 <title>Ontario-Mortgage Broker | First & Second Mortgages</title>
-<link rel="canonical" href="https://ontario-mortgagebroker.ca/">
-<link rel="preload" as="image" href="ontario-mortgage-broker-hero.webp">
+<link rel="canonical" href="https://ontariomortgagebrokerca.ca/">
+<link rel="preload" as="image" href="images/ontario-mortgage-broker-hero.webp">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<!--  SCHEMA MARKUP (SEO) -->
+<link rel="stylesheet" href="css/style.css">
+ <!-- SCHEMA MARKUP (SEO) -->
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MortgageBroker",
   "name": "Miss Hareem Jibran Mortgage Broker",
-  "url": "https://ontario-mortgagebroker.ca",
-  "logo": "https://ontario-mortgagebroker.ca/ontario-mortgage-broker-logo.webp",
+  "url": "https://ontariomortgagebrokerca.ca",
+  "logo": "https://ontariomortgagebrokerca.ca/ontario-mortgage-broker-logo.webp",
   "telephone": "+1-647-303-9686",
   "affiliation": {
     "@type": "Organization",
@@ -49,149 +57,6 @@
 }
 </script>
 
-
-
-    <!-- CSS STYLE LAST -->
-
-<style>
-/* Reset & Body */
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
-body { line-height:1.6; color:#333; scroll-behavior:smooth; background:#fdfdfd; }
-a { text-decoration:none; color:inherit; }
-img { display:block; max-width:100%; height:auto; }
-
-/* Header */
-header { background:#0d47a1; color:#fff; padding:15px 0; position:fixed; width:100%; top:0; z-index:1000; transition:0.3s; }
-header.scrolled { background:#0b3a8b; }
-header .container { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto; padding:0 20px; }
-header nav a { margin-left:20px; font-weight:600; transition:0.3s; }
-header nav a:hover { text-decoration:underline; color:#ff9800; }
-
-/* Hero Section */
-/* .hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:100vh; background:url('ontario-mortgage-broker-hero.webp') no-repeat center center/cover; color:#fff; position:relative; width:100vw; } */
-.hero{position:relative;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center;text-align:center;overflow:hidden;color:#fff}.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5);z-index:-1}.hero-content{position:relative;z-index:1;max-width:700px;animation:fadeIn 1s ease forwards;opacity:0}.hero h1{font-size:3rem;margin-bottom:20px}.hero p{font-size:1.2rem;margin-bottom:20px}.hero .cta{padding:12px 25px;background:#ff9800;color:#fff;font-weight:600;border-radius:5px;transition:.3s}.hero .cta:hover{transform:scale(1.05)}@keyframes fadeIn{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
-.hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); }
-.hero-content { position:relative; z-index:1; max-width:700px; animation:fadeIn 1s ease forwards; opacity:0; }
-.hero h1 { font-size:3rem; margin-bottom:20px; }
-.hero p { font-size:1.2rem; margin-bottom:20px; }
-.hero .cta { padding:12px 25px; background:#ff9800; color:#fff; font-weight:600; border-radius:5px; transition:0.3s; }
-.hero .cta:hover { transform:scale(1.05); }
-
-/* Keyframes */
-@keyframes fadeIn {0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
-
-/* Sections */
-section { padding:80px 20px; max-width:1200px; margin:auto; }
-h2 { text-align:center; margin-bottom:40px; font-size:2rem; color:#0d47a1; }
-
-/* About Section */
-.about { 
-  display:flex; 
-  flex-wrap:wrap; 
-  align-items:center; 
-  gap:20px; 
-  justify-content:space-between; 
-}
-.about .text { 
-  flex:1; 
-  font-size:1rem; 
-  line-height:1.8; 
-  order:1; 
-  padding-right:20px; 
-}
-.about img { 
-  flex:1; 
-  border-radius:12px; 
-  transition:transform 0.5s; 
-  order:2; 
-  max-width:100%; 
-  max-height:400px; 
-  object-fit:cover; 
-}
-.about img:hover { transform:scale(1.05) rotate(1deg); }
-
-/* Services */
-.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-.service-card { background:#f1f1f1; padding:25px; border-radius:12px; text-align:center; transition: transform 0.3s, box-shadow 0.3s; }
-.service-card:hover { transform:translateY(-10px); box-shadow:0 10px 25px rgba(0,0,0,0.2); }
-.service-card h3 { margin-bottom:10px; color:#1976d2; }
-
-/* Calculator */
-.calculator { max-width:600px; margin:auto; background:#e3f2fd; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:transform 0.3s; }
-.calculator:hover { transform:translateY(-5px); }
-.calculator input { width:100%; padding:15px; margin:10px 0; border-radius:8px; border:1px solid #ccc; transition:0.3s; }
-.calculator input:focus { border-color:#1976d2; box-shadow:0 0 10px rgba(25,118,210,0.3); }
-.calculator button { padding:15px 25px; background:#1976d2; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:0.3s; }
-.calculator button:hover { background:#0d47a1; transform:scale(1.05); }
-.calculator .result { margin-top:15px; font-weight:600; font-size:1.1rem; }
-
-/* Reviews */
-.reviews { text-align:center; }
-.review-placeholder { background:#f1f1f1; padding:20px; border-radius:12px; margin:10px auto; max-width:600px; transition:transform 0.3s; }
-.review-placeholder:hover { transform:scale(1.03); }
-
-/* Contact Form */
- .contact form { max-width:600px; margin:auto; display:flex; flex-direction:column; background:#e3f2fd; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:transform 0.3s; }
-.contact form:hover { transform:translateY(-5px); }
-.contact input, .contact textarea { padding:15px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc; transition:0.3s; }
-.contact input:focus, .contact textarea:focus { border-color:#1976d2; box-shadow:0 0 12px rgba(25,118,210,0.3); }
-.contact button { padding:15px 25px; background:#1976d2; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:0.3s; }
-.contact button:hover { background:#0d47a1; transform:scale(1.05); } 
-
-
-
-/* Footer */
-footer { background:#000; color:#fff; padding:60px 20px 20px; font-size:0.9rem; }
-.footer-container { display:flex; flex-wrap:wrap; gap:30px; max-width:1200px; margin:auto; justify-content:space-between; }
-.footer-col { flex:1 1 200px; }
-.footer-col h3 { margin-bottom:15px; color:#ff9800; }
-.footer-col p, .footer-col ul, .footer-col a { margin-bottom:10px; color:#fff; }
-.footer-col a { display:inline-block; transition:0.3s; }
-.footer-col a:hover { color:#ff9800; text-decoration:underline; }
-.footer-bottom { text-align:center; margin-top:40px; border-top:1px solid #333; padding-top:20px; color:#ccc; }
-
-
-
-.footer-legal {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.footer-legal a {
-  color: #ccc;
-  font-size: 0.9rem;
-  transition: color 0.3s;
-}
-
-.footer-legal a:hover {
-  color: #ff9800;
-  text-decoration: underline;
-}
-
-
-
-
-
-/* Responsive */
-@media(max-width:768px){
-.hero h1{font-size:2rem;}
-.hero p{font-size:1rem;}
-.about { flex-direction:column; }
-.about .text, .about img { order:initial; padding:0; max-height:none; }
-header .container { flex-direction:column; gap:10px; }
-}
-/* Responsive tweaks for Services section */
-@media(max-width:768px){
-  .services {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .service-card {
-    padding: 20px;
-  }
-}
-</style>
 </head>
 <body>
 
@@ -201,7 +66,7 @@ header .container { flex-direction:column; gap:10px; }
 <div class="logo">
   <!-- <img src="logo.png" alt="MortgagePro Logo" style="height:50px;"> -->
    <img 
-  src="ontario-mortgage-broker-logo.webp"
+  src="images/ontario-mortgage-broker-logo.webp"
   alt="Ontario Mortgage Broker logo – licensed mortgage brokerage in Ontario Canada"
   loading="lazy"
   width="60"
@@ -223,30 +88,19 @@ header .container { flex-direction:column; gap:10px; }
 
 
 <section class="hero" id="hero">
-  <img src="ontario-mortgage-broker-hero.webp" alt="Ontario mortgage broker helping clients with first and second mortgages in Brampton" class="hero-img" loading="eager">
-  <!-- <div class="hero-content">
-    <h1>Trusted Ontario Mortgage Brokers for First & Second Mortgages</h1>
-    <p>We help clients secure the best mortgage rates across Ontario.</p>
-    <a href="#contact" class="cta">Get Free Consultation</a>
-  </div> -->
+  <img src="images/ontario-mortgage-broker-hero.webp" alt="Ontario mortgage broker helping clients with first and second mortgages in Brampton" class="hero-img" loading="eager">
   <div class="hero-content">
-  <h1>Miss Hareem Jibran – Mortgage Broker at Centum Mortgage Ontario</h1>
-  <p>Licensed mortgage broker with Centum Mortgage helping Ontario clients with first & second mortgages.</p>
+  <h1>Miss Hareem Jibran – Mortgage Broker at Centum Mortgage</h1>
+  <p>Licensed Mortgage Broker with Centum Mortgage, helping Ontario clients with first and second mortgages.</p>
   <a href="#contact" class="cta">Get Free Consultation</a>
 </div>
 
 </section>
 
 
-
-
-
-
-
-
 <!-- About -->
 <section id="about">
-  <h2>About Ontario-Mortgage Broker</h2>
+  <h2>About Centum Mortgage</h2>
   <div class="about">
     <div class="text">
       <h3>Licensed Mortgage Brokerage in Ontario</h3>
@@ -267,7 +121,7 @@ header .container { flex-direction:column; gap:10px; }
 
       <h3>Transparency, Trust & Long-Term Success</h3>
       <p>
-        At Centum mortgage Broker, we believe in transparency, trust, and long-term financial success.
+        At Centum Mortgage Broker, we believe in transparency, trust, and long-term financial success.
         Our goal is to simplify the mortgage process by offering clear advice, personalized
         solutions, and reliable support tailored specifically to Ontario's lending regulations
         and market conditions.
@@ -275,7 +129,7 @@ header .container { flex-direction:column; gap:10px; }
     </div>
     <!-- <img src="image2.jpg" alt="About Ontario Mortgage Broker"> -->
      <img 
-  src="ontario-mortgage-broker-about.webp"
+  src="images/ontario-mortgage-broker-about.webp"
   alt="Ontario mortgage broker providing first and second mortgages in Ontario"
   loading="lazy"
   width="1400"
@@ -288,14 +142,14 @@ header .container { flex-direction:column; gap:10px; }
 
 <!-- Services -->
 <section id="services">
-  <h2>Our Mortgage Services at Ontario Mortgage Broker</h2>
+  <h2>Our Mortgage Services at Centum Mortgage</h2>
 
   <div class="services">
 
     <div class="service-card">
       <h3>First & Second Mortgages in Ontario</h3>
       <p>
-        At <strong>Centum mortgage Broker</strong>, we specialize in <strong>First and Second Mortgages</strong> for homeowners and buyers across Ontario. 
+        At <strong>Centum Mortgage Broker</strong>, we specialize in <strong>First and Second Mortgages</strong> for homeowners and buyers across Ontario. 
         Whether you need a primary mortgage for a home purchase or a second mortgage to access home equity, our expert brokers work with trusted lenders 
         to secure competitive interest rates, flexible terms, and customized solutions tailored to your financial goals.
       </p>
@@ -305,7 +159,7 @@ header .container { flex-direction:column; gap:10px; }
       <h3>Mortgage Refinancing in Ontario</h3>
       <p>
         Our <strong>mortgage refinancing</strong> services help Ontario homeowners reduce monthly payments, lower interest rates, consolidate debt, 
-        or unlock equity. <strong>Centum mortgage Broker</strong> carefully analyzes your existing mortgage and market conditions to provide 
+        or unlock equity. <strong>Centum Mortgage Broker</strong> carefully analyzes your existing mortgage and market conditions to provide 
         refinancing options that ensure long-term financial stability and growth.
       </p>
     </div>
@@ -314,7 +168,7 @@ header .container { flex-direction:column; gap:10px; }
       <h3>Investment Property Mortgages</h3>
       <p>
         We assist real estate investors throughout Ontario with customized <strong>investment property mortgage solutions</strong>. 
-        From first-time investors to experienced buyers, <strong>Centum mortgage Broker</strong> structures financing to maximize returns 
+        From first-time investors to experienced buyers, <strong>Centum Mortgage Broker</strong> structures financing to maximize returns 
         while minimizing risks, helping clients make informed investment decisions.
       </p>
     </div>
@@ -323,7 +177,7 @@ header .container { flex-direction:column; gap:10px; }
       <h3>First-Time Home Buyer Assistance in Ontario</h3>
       <p>
         Buying your first home can be complex. Our expert brokers guide first-time buyers across Ontario through every step, 
-        explaining mortgage options, approval requirements, and closing costs. <strong>Ontario Mortgage Broker</strong> ensures a smooth, 
+        explaining mortgage options, approval requirements, and closing costs. <strong>Centum Mortgage Broker</strong> ensures a smooth, 
         confident, and informed home-buying experience.
       </p>
     </div>
@@ -331,16 +185,22 @@ header .container { flex-direction:column; gap:10px; }
   </div>
 </section>
 
-<!-- Calculator -->
+
 <section id="calculator">
-<h2>Mortgage Calculator</h2>
-<div class="calculator">
-<input type="number" id="loanAmount" placeholder="Loan Amount">
-<input type="number" id="interestRate" placeholder="Interest Rate (%)">
-<input type="number" id="termYears" placeholder="Term (Years)">
-<button onclick="calculateMortgage()">Calculate</button>
-<div class="result" id="calcResult"></div>
-</div>
+  <h2>Mortgage Calculator</h2>
+  <div class="calculator">
+
+    <input type="number" id="loanAmount" placeholder="Mortgage Amount" required>
+    <input type="text" id="userName" placeholder="Your Name" required>
+    <input type="email" id="userEmail" placeholder="Your Email" required>
+    <input type="tel" id="userPhone" placeholder="Your Phone Number" required>
+
+    <!-- <button onclick="submitCalculator()">Submit</button> -->
+     <button type="button" onclick="submitCalculator()">Submit</button>
+
+    <div class="result" id="calcResult"></div>
+
+  </div>
 </section>
 
 <!-- Reviews -->
@@ -376,7 +236,7 @@ header .container { flex-direction:column; gap:10px; }
 <footer>
 <div class="footer-container">
 <div class="footer-col">
-<h3>Ontario-MortgageBroker</h3>
+<h3>Centum Mortgage</h3>
 <p>Your trusted mortgage broker providing first & second mortgage solutions in Ontario.</p>
 </div>
 <div class="footer-col">
@@ -390,14 +250,7 @@ header .container { flex-direction:column; gap:10px; }
 <li><a href="#contact">Contact</a></li>
 </ul>
 </div>
-<!-- <div class="footer-col">
-<h3>Contact Info</h3>
-<p>Email: Commercial.inquiries4@gmail.com</p>
-<p>Phone: +1 647-303-9686</p>
-<p>Address: 80 Eastern Ave Unit 3, Brampton, ON L6W 1X9</p>
-<p>Mortgage Broker: Miss Hareem Jibran (Centum Mortgage)</p>
 
-</div> -->
 
 
 <div class="footer-col">
@@ -428,9 +281,11 @@ header .container { flex-direction:column; gap:10px; }
 </div>
 
 <div class="footer-bottom">
-<p>© 2025 Ontario-MortgageBroker. All rights reserved.</p>
+<p>© 2025 Centum Mortgage. All rights reserved.</p>
 </div>
 </footer>
+
+
 
 <script>
 // Header scroll effect
@@ -438,21 +293,44 @@ window.addEventListener('scroll', () => {
 document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Calculator JS
-function calculateMortgage() {
-const loan = parseFloat(document.getElementById('loanAmount').value);
-const rate = parseFloat(document.getElementById('interestRate').value)/100/12;
-const term = parseFloat(document.getElementById('termYears').value)*12;
-if(loan && rate && term){
-const payment = (loan*rate)/(1-Math.pow(1+rate,-term));
-document.getElementById('calcResult').innerText = "Estimated Monthly Payment: $" + payment.toFixed(2);
-} else {
-document.getElementById('calcResult').innerText = "Please enter all values.";
-}
-}
-
 
 </script>
+
+
+<script>
+function submitCalculator() {
+
+  const loan = document.getElementById('loanAmount').value.trim();
+  const name = document.getElementById('userName').value.trim();
+  const email = document.getElementById('userEmail').value.trim();
+  const phone = document.getElementById('userPhone').value.trim();
+
+  if (loan === "" || name === "" || email === "" || phone === "") {
+    alert("Please fill all fields");
+    return;
+  }
+
+  document.getElementById('calcResult').innerText =
+    "Thank you! Your information has been submitted.";
+
+  fetch("https://script.google.com/macros/s/AKfycbwtEr0Hlg1XLJPN4onpiX2AJ2Kz67mdaRW6V-P7Z06qwp-YtGSgO6yAcswkgmjBA7VI/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body:
+      "loan=" + encodeURIComponent(loan) +
+      "&name=" + encodeURIComponent(name) +
+      "&email=" + encodeURIComponent(email) +
+      "&phone=" + encodeURIComponent(phone)
+  });
+
+  // Clear fields
+  document.getElementById('loanAmount').value = "";
+  document.getElementById('userName').value = "";
+  document.getElementById('userEmail').value = "";
+  document.getElementById('userPhone').value = "";
+}
+</script>
+
 
 </body>
 </html>

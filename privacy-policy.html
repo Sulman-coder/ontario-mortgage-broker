@@ -7,8 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Privacy Policy of Ontario Mortgage Broker – Learn how we collect, use, and protect your personal information.">
 <meta name="keywords" content="Privacy Policy, Mortgage Broker Ontario, Personal Data Protection, First & Second Mortgages">
+<meta name="robots" content="index, follow">
+
 <title>Privacy Policy | Ontario Mortgage Broker</title>
-<link rel="canonical" href="https://ontario-mortgagebroker.ca/privacy-policy.html">
+<link rel="canonical" href="https://ontariomortgagebrokerca.ca/privacy-policy.html">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
   body { font-family: 'Poppins', sans-serif; margin:0; padding:0; background:#fdfdfd; color:#333; line-height:1.7; }
@@ -35,7 +37,7 @@
   <p><strong>Last Updated:</strong> January 2025</p>
 
   <p>
-    <strong>Ontario Mortgage Broker</strong> respects your privacy and is committed to protecting
+    <strong>Centum Mortgage Broker</strong> respects your privacy and is committed to protecting
     your personal information. This Privacy Policy explains how we collect, use, disclose,
     and safeguard your information when you visit our website or submit an inquiry.
   </p>
@@ -77,7 +79,7 @@
 <footer>
   <div class="footer-container">
     <div class="footer-col">
-      <h3>Ontario-Mortgage Broker</h3>
+      <h3>Centum Mortgage</h3>
       <p>Your trusted mortgage broker providing first & second mortgage solutions in Ontario.</p>
     </div>
     <div class="footer-col">
@@ -111,9 +113,47 @@
     <a href="#top" style="color:#ff9800; font-weight:600; text-decoration:underline;">Back to Top</a>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Ontario-Mortgage Broker. All rights reserved.</p>
+    <p>© 2025 Centum Mortgage. All rights reserved.</p>
   </div>
 </footer>
+
+
+
+
+<script>
+function submitCalculator() {
+
+  const loan = document.getElementById('loanAmount').value;
+  const name = document.getElementById('userName').value;
+  const email = document.getElementById('userEmail').value;
+  const phone = document.getElementById('userPhone').value;
+
+  if(!loan || !name || !email || !phone){
+    alert("Please fill all fields");
+    return;
+  }
+
+  // Optional: show success message
+  document.getElementById('calcResult').innerText = "Thank you! Your data has been submitted.";
+
+  // Send data to Google Sheet
+  fetch("https://script.google.com/macros/s/AKfycbygLiRAy1IXlyJt7Lk-_81vHv7pD8culQFsn3uB6i_cXP_R4LT4zbvT9EBrf661yG6YfQ/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body:
+      "loan=" + loan +
+      "&name=" + encodeURIComponent(name) +
+      "&email=" + encodeURIComponent(email) +
+      "&phone=" + encodeURIComponent(phone)
+  });
+
+  // Optional: clear form
+  document.getElementById('loanAmount').value = "";
+  document.getElementById('userName').value = "";
+  document.getElementById('userEmail').value = "";
+  document.getElementById('userPhone').value = "";
+}
+</script>
 
 </body>
 </html>
