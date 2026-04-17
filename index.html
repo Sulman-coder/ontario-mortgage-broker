@@ -57,6 +57,25 @@
 }
 </script>
 
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18062397955"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18062397955');
+</script>
+
+
+
+
 </head>
 <body>
 
@@ -85,7 +104,7 @@
 </div>
 </header>
 
-
+<!-- Hero Section -->
 
 <section class="hero" id="hero">
   <img src="images/ontario-mortgage-broker-hero.webp" alt="Ontario mortgage broker helping clients with first and second mortgages in Brampton" class="hero-img" loading="eager">
@@ -144,6 +163,15 @@
 <section id="services">
   <h2>Our Mortgage Services at Centum Mortgage</h2>
 
+<p style="text-align:center; font-weight:bold; margin-bottom:20px;">
+Miss Hareem Jibran – Licensed Mortgage Broker (M26000091) | Centum Mortgage
+</p>
+
+
+<p style="text-align:center; font-weight:bold;">
+  Licensed Mortgage Agent – License #M26000091
+</p>
+
   <div class="services">
 
     <div class="service-card">
@@ -185,7 +213,7 @@
   </div>
 </section>
 
-
+<!--Calculater -->
 <section id="calculator">
   <h2>Mortgage Calculator</h2>
   <div class="calculator">
@@ -203,18 +231,44 @@
   </div>
 </section>
 
+
+
+
 <!-- Reviews -->
+
+
+  <h2>Client Reviews</h2>
+
+<form id="reviewForm">
+
+  <input type="text" id="name" placeholder="Your Name" required>
+  <textarea id="review" placeholder="Your Review" required></textarea>
+
+  <select id="rating" required>
+    <option value="">Rating</option>
+    <option value="5">5 Stars</option>
+    <option value="4">4 Stars</option>
+    <option value="3">3 Stars</option>
+    <option value="2">2 Stars</option>
+    <option value="1">1 Star</option>
+  </select>
+
+  <button type="submit">Submit Review</button>
+</form>
+
+
+
 <section id="reviews">
-<h2>Client Reviews</h2>
-<div class="reviews">
-<div class="review-placeholder">"Excellent mortgage advice! – John D."</div>
-<div class="review-placeholder">"Professional and fast service. – Sarah K."</div>
-</div>
+  <h2>Reviews</h2>
+  <div class="reviews" id="reviewsContainer">
+    <!-- Reviews from Google Sheet will appear here dynamically -->
+  </div>
 </section>
 
-
+<!-- Contact -->
 
 <section class="contact">
+  <h2>Contact</h2>
   <form
     id="contact"
     class="contact-form"
@@ -255,21 +309,26 @@
 
 <div class="footer-col">
   <h3>Contact Info</h3>
-  <p>Email: <a href="mailto:Commercial.inquiries4@gmail.com">Commercial.inquiries4@gmail.com</a></p>
+  <p>Email: <a href="mailto:hareem_jibran@centum.ca">hareem_jibran@centum.ca</a></p>
   <p>Phone: <a href="tel:+16473039686">+1 647-303-9686</a></p>
   <p>
     Address:<br>
     80 Eastern Ave Unit 3,<br>
     Brampton, ON L6W 1X9
   </p>
-  <p>Mortgage Broker: Miss Hareem Jibran<br>(Centum Mortgage)</p>
+  <!-- <p>Mortgage Broker: Miss Hareem Jibran<br>(Centum Mortgage)</p> -->
+   <p>
+  Mortgage Broker: Miss Hareem Jibran <br>
+  License #: M26000091 <br>
+  (Centum Mortgage Brokerage - License #11705)
+</p>
 </div>
 
 <div class="footer-col">
 <h3>Follow Us</h3>
 <a href="https://facebook.com" target="_blank">Facebook</a><br>
 <a href="https://linkedin.com" target="_blank">LinkedIn</a><br>
-<a href="mailto:Commercial.inquiries4@gmail.com">Email</a>
+<a href="mailto:hareem_jibran@centum.ca">Email</a>
 
 </div>
 </div>
@@ -283,9 +342,20 @@
 <div class="footer-bottom">
 <p>© 2025 Centum Mortgage. All rights reserved.</p>
 </div>
+
+<!-- <p style="font-size:12px; text-align:center; margin-top:10px;">
+License Number: M26000091 | Centum Mortgage Brokerage License #11705
+</p> -->
+
+<p style="font-size:12px; text-align:center; margin-top:10px;">
+  License Number: M26000091 (Mortgage Agent Level 1) <br>
+  Brokerage: Centum Mortgage (License #11705)
+</p>
 </footer>
 
 
+
+<!-- Script -->
 
 <script>
 // Header scroll effect
@@ -331,6 +401,110 @@ function submitCalculator() {
 }
 </script>
 
+<!-- <script>
+const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT3NXBOKtOuxaKT1Jug_YqQty90-bs3SLeryWjiobzXx_eLWZ3nd1yGoVfOP8EgRDvI3JFUOSgfd9-b/pub?output=csv";
 
+fetch(sheetURL)
+  .then(res => res.text())
+  .then(data => {
+    const rows = data.split("\n");
+    const container = document.getElementById("reviewsContainer");
+
+    for(let i=1; i<rows.length; i++){
+      const cols = rows[i].split(",");
+
+      if(cols.length < 4) continue; // skip incomplete rows
+
+      const stars = "⭐".repeat(cols[2]); // Rating column
+
+      const card = document.createElement("div");
+      card.className = "review-card";
+
+      card.innerHTML = `
+        <div class="stars">${stars}</div>
+        <p>"${cols[1]}"</p>
+        <h4>${cols[0]}</h4>
+        <span>${cols[3]}</span>
+      `;
+
+      container.appendChild(card);
+    }
+  });
+</script> -->
+
+
+
+
+
+
+
+
+<script>
+
+const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT3NXBOKtOuxaKT1Jug_YqQty90-bs3SLeryWjiobzXx_eLWZ3nd1yGoVfOP8EgRDvI3JFUOSgfd9-b/pub?output=csv";
+
+fetch(sheetURL + "&t=" + new Date().getTime())
+  .then(res => res.text())
+  .then(data => {
+
+     console.log(data);
+
+    const rows = data.split("\n");
+    const container = document.getElementById("reviewsContainer");
+
+    container.innerHTML = "";
+
+    for(let i = rows.length - 1; i > 0; i--) {
+      const cols = rows[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+
+      if(cols.length < 4) continue;
+
+      const stars = "⭐".repeat(parseInt(cols[2]));
+
+      const card = document.createElement("div");
+      card.className = "review-card";
+
+      card.innerHTML = `
+        <div class="stars">${stars}</div>
+        <p>"${cols[1]}"</p>
+        <h4>${cols[0]}</h4>
+        <span>${cols[3]}</span>
+      `;
+
+      container.appendChild(card);
+    }
+  });
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+<script>
+document.getElementById("reviewForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = new URLSearchParams();
+  data.append("name", document.getElementById("name").value);
+  data.append("review", document.getElementById("review").value);
+  data.append("rating", document.getElementById("rating").value);
+
+   fetch("https://script.google.com/macros/s/AKfycbzJqfX7tYnBmqkLzo6e_lqCSawXb_xY9ArBwvRn5qye9cZ7_t2mU6JudkzwcqZOMjUq/exec", {
+    method: "POST",
+    body: data
+  })
+  .then(res => res.text())
+  .then(response => {
+    alert("Review submitted successfully!");
+  });
+});
+</script>
 </body>
 </html>
